@@ -8,7 +8,7 @@ namespace SortAlgorithm
     {
         public static void Run()
         {
-            const int N = 1000 * 1 * 10;//随机数数量以及范围
+            const int N = 10 * 1 * 10;//随机数数量以及范围
             const int RADIX = 1000; //基数
             const int T = 5;
             int digits = (int)Math.Ceiling(Math.Log(N, RADIX));//位数
@@ -162,7 +162,7 @@ namespace SortAlgorithm
 
         public void Stop(string tip)
         {
-            Console.WriteLine($"{title} {tip}: {diff / 100:N0}us, average {diff/(100 * times):N0}us ");
+            Console.WriteLine($"{title} {tip}: {diff / 10:N0}us, average {diff/(10 * times):N0}us ");
         }
 
         public void Reset()
@@ -183,7 +183,7 @@ namespace SortAlgorithm
         }
         public void Dispose()
         {
-            var diff = (DateTime.Now.Ticks - ticks) / 100000;
+            var diff = (DateTime.Now.Ticks - ticks) / 10000;
             Console.WriteLine($"{title} {diff} ms");
         }
     }
